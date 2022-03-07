@@ -1,0 +1,38 @@
+
+{% extends "parent.html" %}
+
+
+{% block body %}
+   <table align=center>
+       <tr>
+           <th>Dpmt_id</th>
+           <th>department_name</th>
+           <th>department_number</th>
+
+       </tr>
+       {%for department in departments %}
+           <tr>
+               <td>{{department.Dpmt_id}}</td>
+               <td>{{department.department_name}}</td>
+               <td>{{department.department_number}}</td>
+               <td><a href="/departmentedit/{{department.Dpmt_id}}">Edit Department</a></td>
+
+
+           </tr>
+       {%endfor%}
+   </table><br/><br/>
+   <a href="/dadmin_home">Admin Home</a>
+
+
+{% endblock %}
+{% block back %}
+    <style>
+        body {
+        background-image: url("https://i.pinimg.com/originals/bf/fe/ed/bffeedff5331ec32b734faeee26ff2fe.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+{% endblock %}
+

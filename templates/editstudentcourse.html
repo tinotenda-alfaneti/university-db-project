@@ -1,0 +1,23 @@
+{% extends "parent.html" %}
+
+{% block body %}
+    <h2>Edit studentcourse</h2>
+    <form action="/studentcourseedit/{{studentcourse.sc_id}}" method="POST">
+        <label>Course ID</label>
+        <input type="text" name="course_id" placeholder="Enter Course Id" value="{{studentcourse.course_id}}">
+        <label>Student ID</label>
+        <input type="text" name="student_id" placeholder="Enter Student Id " value="{{studentcourse.student_id}}">
+        <input type="submit" value="Update User">
+    </form>
+    <a href="/scadmin_home">Admin Home</a>
+{% endblock %}
+{% block back %}
+    <style>
+        body {
+        background-image: url("https://i.pinimg.com/originals/bf/fe/ed/bffeedff5331ec32b734faeee26ff2fe.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+{% endblock %}

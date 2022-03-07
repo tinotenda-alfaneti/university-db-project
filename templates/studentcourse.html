@@ -1,0 +1,36 @@
+{% extends "parent.html" %}
+
+{% block body %}
+   <table align=center border ="1">
+       <tr>
+           <th>sc_id</th>
+           <th>course_id</th>
+           <th>student_id</th>
+           
+       </tr>
+       {% for studentcourse in studentcourses %}
+           <tr>
+               <td>{{studentcourse.sc_id}}</td>
+               <td>{{studentcourse.course_id}}</td>
+               <td>{{studentcourse.student_id}}</td>
+               
+               
+           </tr>
+       {%endfor%}
+   </table><br/><br/>
+   <a href="/">Home</a><br/><br/>
+   <a href="/sclogin">Admin Login</a>
+   
+   
+    
+{% endblock %}
+{% block back %}
+    <style>
+        body {
+        background-image: url("https://i.pinimg.com/originals/bf/fe/ed/bffeedff5331ec32b734faeee26ff2fe.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+{% endblock %}

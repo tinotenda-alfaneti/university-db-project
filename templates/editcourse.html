@@ -1,0 +1,23 @@
+{% extends "parent.html" %}
+
+
+{% block body %}
+    <h2>Edit Courses</h2>
+    <form action="/course_edit/{{course.course_id}}" method="post">
+        <label>Course Name:</label>
+        <input type="text" name="course_name" placeholder="Enter Course name" value="{{course.course_name}}">
+        <label>Instructor ID:</label>
+        <input type="text" name="instructor_id" placeholder="Enter Instructor ID" value="{{course.instructor_id}}">
+        <input type="submit" value="Update Course">
+    </form>
+{% endblock %}
+{% block back %}
+    <style>
+        body {
+        background-image: url("https://i.pinimg.com/originals/bf/fe/ed/bffeedff5331ec32b734faeee26ff2fe.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+{% endblock %}

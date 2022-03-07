@@ -1,0 +1,25 @@
+{% extends "parent.html" %}
+
+
+{% block body %}
+    <h2>Edit Departments</h2>
+    <form action="/departmentedit/{{department.Dpmt_id}}" method="post">
+        <label>Username:</label>
+        <input type="text" name="department_name" placeholder="Enter Department name" value="{{department.department_name}}">
+        <label>Age:</label>
+        <input type="text" name="department_number" placeholder="Enter Department number " value="{{department.department_number}}">
+        <input type="submit" value="Update User">
+    </form>
+{% endblock %}
+{% block back %}
+    <style>
+        body {
+        background-image: url("https://i.pinimg.com/originals/bf/fe/ed/bffeedff5331ec32b734faeee26ff2fe.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+{% endblock %}
+
+

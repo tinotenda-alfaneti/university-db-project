@@ -1,0 +1,37 @@
+{% extends "parent.html" %}
+
+
+{% block body %}
+   <table align=center>
+       <tr>
+           <th>Instructor_id</th>
+           <th>dept_id</th>
+           <th>instructor_name</th>
+           
+       </tr>
+       {%for instructor in instructors %}
+           <tr>
+               <td>{{instructor.Instructor_id}}</td>
+               <td>{{instructor.dept_id}}</td>
+               <td>{{instructor.instructor_name}}</td>
+               <td><a href="/instructorsedit/{{instructor.Instructor_id}}">Edit Instructor</a></td>
+               
+               
+           </tr>
+       {%endfor%}
+   </table><br/><br/>
+   <a href="/iadmin_home">Admin Home</a>
+   
+   
+{% endblock %}
+{% block back %}
+    <style>
+        body {
+        background-image: url("https://i.pinimg.com/originals/bf/fe/ed/bffeedff5331ec32b734faeee26ff2fe.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+{% endblock %}
+

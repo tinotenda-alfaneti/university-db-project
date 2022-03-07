@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>University Database</title>
+        {% block head%}
+        {% endblock %}
+    </head>
+    <body>
+        <style>
+            h3 {text-align: center;}
+            h4 {text-align: center;}
+        </style>
+        <h1><img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj7mA0Xdo6VXRRuHQcB0ux9WXmpRaX8faNIAgNzNE-AJc5IVtq9_tQ7yW1yOGCvo7dPtk&usqp=CAU" style="float:left;width:42px;height:42px;">OUR UNIVERSITY <h4>
+            <a style="margin:50px" href="/departments" >Departments</a>
+            <a style="margin:50px" href="/instructors">Instructor</a>  <a style="margin:50px" href="/studentcourse">StudentCourses</a>
+            <a style="margin:50px" href="/courses">Courses</a> <a style="margin:50px" href="/students">Students</a></h4></h1>
+        <h3><i>"Success is your portion"</i></h3><br/>
+        {% block body %}
+        {% endblock %}
+
+    </body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                {% if category == "error" %}
+                <div class="alert alert-danger alter-dismissable fade show" role="alert">
+                   {{message}}
+                   <buttontype="button" class="close" data-dismiss="alert">
+                     <span aria-hidden="true">&times;</span>
+                   </button>
+                </div>
+                {% else %}
+                <div class="alert alert-success alter-dismissable fade show" role="alert">
+                   {{message}}
+                   <buttontype="button" class="close" data-dismiss="alert">
+                     <span aria-hidden="true">&times;</span>
+                   </button>
+                </div>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block back %}
+    <style>
+        body {
+        background-image: url("https://cdn.hipwallpaper.com/i/40/64/IRUpS0.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+        {% endblock %}
+</html>

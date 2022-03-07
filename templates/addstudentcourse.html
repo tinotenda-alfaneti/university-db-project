@@ -1,0 +1,22 @@
+{% extends "parent.html" %}
+
+
+{% block body %}
+    <form  method="post">
+        <input type="text" placeholder="Enter Course ID" name="course_id">
+        <input type="text" placeholder="Enter Student ID" name="student_id">
+        <input type="submit">
+    </form>
+    <a href="/scadmin_home">Admin Home</a>
+
+{% endblock %}
+{% block back %}
+    <style>
+        body {
+        background-image: url("https://i.pinimg.com/originals/bf/fe/ed/bffeedff5331ec32b734faeee26ff2fe.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+{% endblock %}

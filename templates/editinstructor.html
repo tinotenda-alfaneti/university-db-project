@@ -1,0 +1,23 @@
+{% extends "parent.html" %}
+
+
+{% block body %}
+    <h2>Edit Instructors</h2>
+    <form action="/instructorsedit/{{instructor.Instructor_id}}" method="post">
+        <label>DepartmentID</label>
+        <input type="text" name="dept_id" placeholder="Enter Department id" value="{{instructor.dept_id}}">
+        <label>InstructorName</label>
+        <input type="text" name="instructor_name" placeholder="Enter Instructor name " value="{{instructor.instructor_name}}">
+        <input type="submit" value="Update Instructor">
+    </form>
+{% endblock %}
+{% block back %}
+    <style>
+        body {
+        background-image: url("https://i.pinimg.com/originals/bf/fe/ed/bffeedff5331ec32b734faeee26ff2fe.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+{% endblock %}

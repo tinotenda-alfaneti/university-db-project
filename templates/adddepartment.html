@@ -1,0 +1,21 @@
+{% extends "parent.html" %}
+
+{% block body %}
+    <form  method="post">
+        <input type="text" placeholder="Enter Department Name" name="department_name">
+        <input type="text" placeholder="Enter Department Number" name="department_number">
+        <input type="submit">
+    </form>
+    <h2><a href="/dadmin_home">Admin Home</a></h2>
+
+{% endblock %}
+{% block back %}
+    <style>
+        body {
+        background-image: url("https://i.pinimg.com/originals/bf/fe/ed/bffeedff5331ec32b734faeee26ff2fe.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+{% endblock %}

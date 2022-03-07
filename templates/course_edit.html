@@ -1,0 +1,34 @@
+
+{% extends "parent.html" %}
+
+{% block body %}
+   <table align=center>
+       <tr>
+           <th>course_id</th>
+           <th>course_name</th>
+           <th>instructor_id</th>
+           
+       </tr>
+       {%for course in courses %}
+           <tr>
+               <td>{{course.course_id}}</td>
+               <td>{{course.course_name}}</td>
+               <td>{{course.instructor_id}}</td>
+               <td><a href="/course_edit/{{course.course_id}}">Edit Course</a></td>
+               
+               
+           </tr>
+       {%endfor%}
+   </table><br/><br/>
+   <a href="/cadmin_home">Admin Home</a>
+{%endblock%}
+{% block back %}
+    <style>
+        body {
+        background-image: url("https://i.pinimg.com/originals/bf/fe/ed/bffeedff5331ec32b734faeee26ff2fe.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+{% endblock %}
